@@ -6,7 +6,8 @@ Python ETL samples
   a. http://brew.sh/
 2. pip: to manage python dependencies.
   a. http://docs.python-guide.org/en/latest/starting/install/osx/
-
+3. docker to create containers
+  a. https://docs.docker.com/docker-for-mac/
 
 # Guidelines for working on this Repo
 1. Always work off a new branch.
