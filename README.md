@@ -6,8 +6,22 @@ Python ETL samples
   a. http://brew.sh/
 2. pip: to manage python dependencies.
   a. http://docs.python-guide.org/en/latest/starting/install/osx/
+  b. `sudo easy_install pip`
 3. docker to create containers
   a. https://docs.docker.com/docker-for-mac/
+  b. install and start docker
+
+# Pre-requisite
+1. Install postgres using homebrew
+    a. `brew install postgres`
+2. Install psycopg2 using 
+    a. `sudo pip install psycopg2`
+3. Start postgres container
+    a. `postgresql_container.sh`
+4. Run individual python scripts
+    a. `python create_db.py`
+    b. `python create_table.py`
+    c. `python insert_data.py`
 
 # Guidelines for working on this Repo
 1. Always work off a new branch.

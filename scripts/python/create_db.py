@@ -1,7 +1,19 @@
-import MySQLdb
-import settings
+import psycopg2
 
-db1 = MySQLdb.connect(host=settings.MYSQL_HOST, user=settings.MYSQL_USER, passwd=settings.MYSQL_PASSWORD)
-cursor = db1.cursor()
-sql = 'CREATE DATABASE python_etl'
-cursor.execute(sql)
+conn = psycopg2.connect("host='localhost' user='postgres' password='root'")
+conn.autocommit = True
+cur = conn.cursor()
+
+cur.execute(
+    """
+        CREATE DATABASE python_etl
+          WITH OWNER = postgres
+           ENCODING = 'UTF8'
+           TABLESPACE = pg_default
+           LC_COLLATE = 'en_US.utf8'
+           LC_CTYPE = 'en_US.utf8'
+           CONNECTION LIMIT = -1;
+""")
+
+cur.close()
+conn.close()
