@@ -1,5 +1,5 @@
 # PythonETL
-Python ETL samples
+Python ETL samples using docker
 
 # Environment
 1. homebrew: to manage macOs dependencies (like pip, mysql etc).
